@@ -1,0 +1,9 @@
+{
+    "name": "instapdf",
+    "description": "Setup with all tools to run instapdf",
+    "json_class": "Chef::Role",
+    "run_list": [
+        "recipe[base]",
+        "recipe[instapdf]"
+    ]
+}

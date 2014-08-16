@@ -1,0 +1,31 @@
+[user]
+    name = <%= @user %>
+    email = <%= @email %>
+
+[color]
+    status = true
+    diff = true
+
+[alias]
+    br = branch
+    st = status
+    ci = commit
+    co = checkout
+    stat = show --stat
+    dump = cat-file -p
+    type = cat-file -t # for git internals
+    # show full history with branches:
+    hist = log --graph --pretty=format:'%Cred%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    # concisely display batch of recent commits:
+    head = !git hist | head
+    # list commits that modified a given file:
+    history = whatchanged --pretty=format:'%Cred%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    # list filetree at given revision:
+    ls = ls-tree -r --name-only --full-tree
+    # search in full commit messages
+    ack = !git log --notes --format=full | ack
+    # show commit messages for a particular loc: $1 => file, $2 => line
+    line = !sh -c 'git log --topo-order --graph -u -L$2,$2:$1' -
+
+[help]
+    autocorrect = 1

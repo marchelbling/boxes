@@ -1,0 +1,8 @@
+{
+    "name": "instapdf",
+    "default_attributes": {
+    },
+    "json_class": "Chef::Environment",
+    "description": "Environment for instapdf app",
+    "chef_type": "environment"
+}

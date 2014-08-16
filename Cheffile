@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'apache2'
+cookbook 'apt'
+cookbook 'database'
+cookbook 'git'
+cookbook 'hostname'
+cookbook 'java'
+cookbook 'mysql'
+cookbook 'nginx'
+cookbook 'nodejs'
+cookbook 'ntp'
+cookbook 'openssh'
+cookbook 'python'
+cookbook 'rabbitmq'
+cookbook 'ssh_known_hosts'
+cookbook 'timezone-ii'
+cookbook 'varnish'
+
+cookbook 'root_ssh_agent',
+  :git => "https://github.com/dergachev/chef_root_ssh_agent"

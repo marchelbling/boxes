@@ -6,9 +6,9 @@ include_recipe 'git'
 include_recipe 'base::locale'
 include_recipe 'base::packages'
 
-include_recipe 'java'
 include_recipe 'python'
 include_recipe 'python::pip'
+include_recipe 'java'
 
 include_recipe 'base::ssh_keys'
 include_recipe 'base::vim'

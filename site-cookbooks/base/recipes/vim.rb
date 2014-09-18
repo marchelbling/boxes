@@ -39,9 +39,8 @@ if !File.directory? vim_global_dir
   end
 end
 
-template vimrc_global do
-  source 'vimrc.erb'
-  variables :bundle_dir => bundle_dir, :vim_dir => vim_global_dir
+cookbook_file vimrc_global do
+  source 'vimrc'
 end
 
 if !File.directory? pathogen_dir
